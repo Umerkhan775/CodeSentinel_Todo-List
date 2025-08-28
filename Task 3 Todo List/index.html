@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+  <title>Minimal Todo List</title>
+</head>
+<body>
+  <main class="wrap" role="application" aria-labelledby="title">
+    <h1 id="title">Todo List</h1>
+
+    <div class="top-row">
+      <div class="new-todo">
+        <input id="newInput" type="text" placeholder="Add a new task and press Enter or click Add" aria-label="Add new todo" />
+        <button id="addBtn" class="add">Add</button>
+      </div>
+    </div>
+
+    <ul id="list" class="todo-list" aria-live="polite"></ul>
+
+    <div class="footer">
+      <div class="left">
+        <span id="counter">0 items</span>
+      </div>
+      <div>
+        <div class="filters" role="tablist" aria-label="Filter todos">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="active">Active</button>
+          <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+      </div>
+      <div>
+        <button id="clearBtn" class="clear-btn">Clear completed</button>
+      </div>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
